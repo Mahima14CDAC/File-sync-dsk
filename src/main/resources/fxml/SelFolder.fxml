@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+
+<AnchorPane fx:id="rBrowse" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.cdac.filesyncdsk.controller.FilesUploadController">
+   <children>
+      <JFXButton fx:id="bBrowse" alignment="CENTER" layoutX="746.0" layoutY="109.0" onAction="#handleBrowseAction" prefHeight="34.0" prefWidth="114.0" stylesheets="@../styles/Styles.css" text="Browse" />
+      <TextField fx:id="folderLocation" layoutX="355.0" layoutY="110.0" prefHeight="31.0" prefWidth="383.0" />
+      <JFXButton fx:id="bNext" alignment="CENTER" layoutX="750.0" layoutY="635.0" prefHeight="34.0" prefWidth="114.0" stylesheets="@../styles/Styles.css" text="Next &gt;" />
+      <VBox fx:id="folderList" layoutX="358.0" layoutY="151.0" prefHeight="475.0" prefWidth="502.0" />
+   </children>
+</AnchorPane>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox id="sidePane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="318.0" stylesheets="@../styles/Styles.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.cdac.filesyncdsk.controller.SidePaneController">
+   <children>
+      <ImageView fitHeight="214.0" fitWidth="318.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../../../../backup/Media/Images/wallpapers/H.%20Potter/HP%20Illustrated/harry-potter-wallpaper-desktop-wallpapers-hd-full-screen.jpg" />
+         </image>
+      </ImageView>
+      <JFXButton fx:id="login" accessibleText="Login" onAction="#loginHandler" prefHeight="73.0" prefWidth="331.0" text="Login" />
+      <JFXButton fx:id="selFolder" accessibleText="Select Folder" onAction="#browseHandler" prefHeight="73.0" prefWidth="346.0" text="Select Folder" />
+      <JFXButton fx:id="sync" accessibleText="Sync" onAction="#syncHandler" prefHeight="73.0" prefWidth="350.0" text="Sync" />
+   </children>
+</VBox>

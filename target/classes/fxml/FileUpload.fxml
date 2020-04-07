@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.collections.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.input.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane fx:id="AnchorPane" prefHeight="267.0" prefWidth="704.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="com.cdac.filesyncdsk.controller.FilesUploadController">
+  <children>
+    <Label layoutX="54.0" layoutY="51.0" text="Subfond :">
+      <font>
+        <Font size="14.0" fx:id="x1" />
+      </font>
+    </Label>
+    <Label font="$x1" layoutX="37.0" layoutY="174.0" text="Upload File :" />
+    <ComboBox fx:id="cSubfond" layoutX="130.0" layoutY="52.0" onAction="#handleSubfondComboAction" prefHeight="21.0" prefWidth="250.0" promptText="--Select Subfond">
+      <items>
+        <FXCollections fx:factory="observableArrayList" />
+      </items>
+    </ComboBox>
+    <ComboBox fx:id="cActivityCode" layoutX="130.0" layoutY="85.0" onAction="#handleActivityCodeComboAction" prefHeight="21.0" prefWidth="250.0" promptText="--Select Activity Code">
+      <items>
+        <FXCollections fx:factory="observableArrayList" />
+      </items>
+    </ComboBox>
+    <RadioButton fx:id="depositeSingle" layoutX="130.0" layoutY="123.0" mnemonicParsing="false" onAction="#handleSingleDepositeAction" selected="true" text="Deposite New Record">
+      <toggleGroup>
+        <ToggleGroup fx:id="depositeType" />
+      </toggleGroup>
+    </RadioButton>
+    <RadioButton fx:id="depositeBulk" layoutX="130.0" layoutY="146.0" mnemonicParsing="false" onAction="#handleBulkDepositeAction" text="Deposite Bulk Records" toggleGroup="$depositeType" />
+    <TextField fx:id="fPackageName" layoutX="322.0" layoutY="143.0" prefWidth="200.0" promptText="Package Name" />
+    <Label fx:id="error" labelFor="$error" layoutX="535.0" layoutY="146.0" text="" textFill="RED" />
+    <TextField fx:id="fUploadFile" layoutX="130.0" layoutY="174.0" prefWidth="392.0" promptText="Upload File" />
+    <Button layoutX="533.0" layoutY="174.0" mnemonicParsing="false" onAction="#handleBrowseAction" text="Browse" />
+    <Button fx:id="bUpload" cancelButton="false" defaultButton="true" layoutX="130.0" layoutY="213.0" mnemonicParsing="false" onAction="#handleUploadAction" text="Upload" />
+    <!--<ProgressBar fx:id="progressBar" layoutX="130.0" layoutY="247.0" prefHeight="11.0" prefWidth="392.0" progress="0.0" />-->
+    <Label font="$x1" layoutX="25.0" layoutY="85.0" text="Activity Code :" />
+    <Label font="$x1" layoutX="18.0" layoutY="132.0" text="Deposite Type :" />
+    <MenuBar fx:id="menuBar" layoutX="2.0" layoutY="0.0" opacity="1.0" prefWidth="702.0" style="Style.css" useSystemMenuBar="false">
+      <menus>
+        <Menu mnemonicParsing="false" text="File">
+          <items>
+            <MenuItem mnemonicParsing="false" onAction="#handleLogoutAction" text="Logout" fx:id="logout">
+              <accelerator>
+                <KeyCodeCombination alt="ANY" code="L" control="UP" meta="UP" shift="UP" shortcut="UP" />
+              </accelerator>
+            </MenuItem>
+          </items>
+        </Menu>
+        <Menu mnemonicParsing="false" text="Help">
+          <items>
+            <MenuItem mnemonicParsing="false" text="About" />
+          </items>
+        </Menu>
+      </menus>
+    </MenuBar>
+    <Label fx:id="lProgress" layoutX="196.0" layoutY="216.0" prefWidth="144.0" text="" textFill="#3385ff" />
+  </children>
+</AnchorPane>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane fx:id="rLogin" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.cdac.filesyncdsk.controller.LoginController">
+   <children>
+      <JFXButton fx:id="bLogin" alignment="CENTER" layoutX="466.0" layoutY="301.0" prefHeight="98.0" prefWidth="222.0" stylesheets="@../styles/Styles.css" text="Login" />
+      <JFXButton fx:id="bNext" layoutX="768.0" layoutY="636.0" prefHeight="36.0" prefWidth="101.0" stylesheets="@../styles/Styles.css" text="Next &gt;" />
+   </children>
+</AnchorPane>
